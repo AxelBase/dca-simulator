@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dca-simulator.vercel.app/sitemap.xml

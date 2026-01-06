@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AxelBase | DCA Simulator</title>
+    <link rel="icon" href="../../AxelLab-Logo.ico" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    
+    
+		<link href="../../_app/immutable/assets/0.BD0J6op3.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/7.Dxt0h77u.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.BDWrOWcj.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Bh-MPRZw.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BJ1Ak9sp.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DeO1XzmG.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/IOCav8yy.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.DYKfXwTM.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DuEmV5e4.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CKuPFPuA.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Bp8RtLBC.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CiQMj1tR.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.BOHEXzQ_.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DlNXMvOS.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DHpw1z5L.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/GwdE7HqI.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/W3o-E1mj.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DeXpFUvI.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/7.DF6KNJKN.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BGJt9to2.js"><!--led0iy--><meta name="description" content="Learn how to read and understand the key summary metrics in the DCA Simulator, with real examples showing the power of dollar-cost averaging."/> <meta property="og:title" content="Interpreting DCA Metrics: Average Cost vs Final Value | DCA Simulator Blog"/> <meta property="og:description" content="Break down total invested, total units, average cost per unit, final price, and portfolio value to evaluate your simulated strategy."/> <meta property="og:url" content="../../blog/posts/post4"/> <meta property="og:type" content="article"/> <meta name="twitter:card" content="summary_large_image"/><!----><title>Interpreting DCA Metrics: Average Cost vs Final Value | DCA Simulator Blog</title>
+  </head>
+  <body data-bs-theme="light">
+    <div style="display: contents"><!--[--><!--[--><!----><header class="fixed-top p-3 w-100" style="z-index: 1040;"><nav class="container glass rounded-pill px-4 py-2 d-flex justify-content-between align-items-center"><div class="d-flex align-items-center gap-3"><a href="../../" class="d-flex align-items-center gap-2 text-decoration-none brand-group svelte-12qhfyh"><img src="../../AxelLab-Logo.ico" alt="Logo" class="nav-logo svelte-12qhfyh"/> <span class="fw-bold fs-5 brand-text svelte-12qhfyh">AxelBase</span></a> <button class="theme-btn svelte-12qhfyh" aria-label="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button> <div class="position-relative"><button class="bmac-button px-3 py-1 rounded-pill d-flex align-items-center gap-2 svelte-12qhfyh" aria-label="Support options"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M2,21V19H20V21H2M20,8V5H4V8H20M20,10H4V13C4,14.38 4.5,15.63 5.31,16.58L11.64,19H12.36L18.69,16.58C19.5,15.63 20,14.38 20,13V10M16,2H8V4H16V2Z"></path></svg> <span class="d-none d-md-inline fw-semibold">Buy me a Coffee</span></button> <!--[!--><!--]--></div></div> <ul class="nav d-none d-lg-flex align-items-center gap-4 m-0"><li><a class="nav-link-custom svelte-12qhfyh" href="../../">Home</a></li> <li><a class="nav-link-custom svelte-12qhfyh" href="../../#about">About</a></li> <li><a class="nav-link-custom svelte-12qhfyh" href="../../#how-to">How to Use</a></li> <li><a class="nav-link-custom svelte-12qhfyh" href="../../#faq">FAQ</a></li> <li><a class="btn btn-primary px-4" href="../../blog">Blog</a></li></ul></nav></header> <main><!--[--><!----><div class="container fade-in post-layout svelte-led0iy" style="padding-top: 150px;"><div class="breadcrumbs svelte-led0iy"><a href="../../blog" class="svelte-led0iy">Blog</a> <span>/</span> <p class="svelte-led0iy">Interpreting DCA Metrics: Average Cost vs Final Value</p></div> <article class="prose svelte-led0iy"><h1 class="svelte-led0iy">Interpreting DCA Metrics: Average Cost vs Final Value</h1> <p class="post-meta svelte-led0iy">Published: January 06, 2026</p> <p class="svelte-led0iy">The results page of the DCA Simulator presents five essential summary metrics that tell the complete story of your investment strategy. Understanding each one helps you evaluate the effectiveness of dollar-cost averaging in different market conditions.</p> <h2 class="svelte-led0iy">The Five Core Metrics</h2> <p class="svelte-led0iy">Total invested shows the exact sum of all periodic purchases. It is simply the fixed amount per period multiplied by the number of periods. This baseline never changes regardless of price movement.</p> <h3 class="svelte-led0iy">Total Units Acquired</h3> <ul class="svelte-led0iy"><li class="svelte-led0iy">Represents the cumulative units bought across all periods</li> <li class="svelte-led0iy">Higher in declining markets due to lower prices per buy</li> <li class="svelte-led0iy">Lower when prices rise steadily</li> <li class="svelte-led0iy">Directly drives final portfolio value</li></ul> <h3 class="svelte-led0iy">Average Cost per Unit</h3> <p class="svelte-led0iy">This is total invested divided by total units acquired. It reflects the true average price you paid across the entire timeline. In rising markets, average cost typically sits below the final price, demonstrating one of the main advantages of spreading purchases over time.</p> <h3 class="svelte-led0iy">Final Asset Price and Portfolio Value</h3> <p class="svelte-led0iy">The final asset price is calculated using the full prorated annual growth applied over the complete duration. Portfolio value is then total units multiplied by this final price. The difference between portfolio value and total invested represents your unrealized gain or loss under the assumed growth scenario.</p> <h2 class="svelte-led0iy">Real Example Breakdown</h2> <p class="svelte-led0iy">Using the standard weekly plan of one hundred dollars over fifty-two weeks starting at ten dollars with five percent annual growth: total invested reaches five thousand two hundred dollars. The simulator calculates five hundred seven point one seven nine seven units acquired, giving an average cost of ten point two five dollars per unit. The final price settles at ten point five zero dollars, producing a portfolio value of five thousand three hundred twenty-five point three nine dollars. This yields a positive return despite the modest growth rate.</p> <h2 class="svelte-led0iy">Comparing Scenarios</h2> <p class="svelte-led0iy">Run the same investment with zero percent growth and average cost equals the initial price exactly, with no gain. Increase growth to higher rates and watch average cost fall further below final price, amplifying returns. These comparisons highlight how dollar-cost averaging performs across flat, rising, or even moderately declining markets.</p> <h2 class="svelte-led0iy">FAQ</h2> <details class="svelte-led0iy"><summary class="svelte-led0iy">Why is average cost lower than final price?</summary> <p class="svelte-led0iy">Because early purchases at lower prices pull the average down when the asset trends upward over time.</p></details> <details class="svelte-led0iy"><summary class="svelte-led0iy">What if final value is below total invested?</summary> <p class="svelte-led0iy">This occurs in declining markets where later buys happen at lower prices, but overall growth is negative.</p></details> <details class="svelte-led0iy"><summary class="svelte-led0iy">Are these returns guaranteed?</summary> <p class="svelte-led0iy">No—these are hypothetical projections based on the linear growth assumption you provide.</p></details> <p class="italic-note svelte-led0iy">Use these metrics to confidently assess any dollar-cost averaging strategy.</p></article></div><!----><!--]--></main> <footer class="glass border-top py-3 mt-auto"><div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center small text-muted"><span>© 2026 AxelBase DCA Simulator</span> <div class="d-flex gap-3"><a href="../../privacy" class="text-decoration-none text-muted hover-accent svelte-12qhfyh">Privacy</a> <a href="../../terms" class="text-decoration-none text-muted hover-accent svelte-12qhfyh">Terms</a></div></div></footer><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_18zy3nd = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						assets: "/dca-simulator"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.BDWrOWcj.js"),
+						import("../../_app/immutable/entry/app.DYKfXwTM.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 7],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AxelBase | DCA Simulator</title>
+    <link rel="icon" href="../../AxelLab-Logo.ico" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    
+    
+		<link href="../../_app/immutable/assets/0.BD0J6op3.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/5.D3i5jrqr.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.BDWrOWcj.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Bh-MPRZw.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BJ1Ak9sp.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DeO1XzmG.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/IOCav8yy.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.DYKfXwTM.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DuEmV5e4.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CKuPFPuA.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Bp8RtLBC.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CiQMj1tR.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.BOHEXzQ_.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DlNXMvOS.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DHpw1z5L.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/GwdE7HqI.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/W3o-E1mj.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DeXpFUvI.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/5.CR_UxvuP.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BGJt9to2.js"><!--1apmzc4--><meta name="description" content="Explore the prorated linear growth formula behind period-by-period price calculations in the DCA Simulator for reliable weekly and monthly projections."/> <meta property="og:title" content="How Linear Price Growth Powers Accurate DCA Results | DCA Simulator Blog"/> <meta property="og:description" content="Understand the deterministic math that drives precise units bought, average cost, and final value in every simulation."/> <meta property="og:url" content="../../blog/posts/post2"/> <meta property="og:type" content="article"/> <meta name="twitter:card" content="summary_large_image"/><!----><title>How Linear Price Growth Powers Accurate DCA Results | DCA Simulator Blog</title>
+  </head>
+  <body data-bs-theme="light">
+    <div style="display: contents"><!--[--><!--[--><!----><header class="fixed-top p-3 w-100" style="z-index: 1040;"><nav class="container glass rounded-pill px-4 py-2 d-flex justify-content-between align-items-center"><div class="d-flex align-items-center gap-3"><a href="../../" class="d-flex align-items-center gap-2 text-decoration-none brand-group svelte-12qhfyh"><img src="../../AxelLab-Logo.ico" alt="Logo" class="nav-logo svelte-12qhfyh"/> <span class="fw-bold fs-5 brand-text svelte-12qhfyh">AxelBase</span></a> <button class="theme-btn svelte-12qhfyh" aria-label="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button> <div class="position-relative"><button class="bmac-button px-3 py-1 rounded-pill d-flex align-items-center gap-2 svelte-12qhfyh" aria-label="Support options"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M2,21V19H20V21H2M20,8V5H4V8H20M20,10H4V13C4,14.38 4.5,15.63 5.31,16.58L11.64,19H12.36L18.69,16.58C19.5,15.63 20,14.38 20,13V10M16,2H8V4H16V2Z"></path></svg> <span class="d-none d-md-inline fw-semibold">Buy me a Coffee</span></button> <!--[!--><!--]--></div></div> <ul class="nav d-none d-lg-flex align-items-center gap-4 m-0"><li><a class="nav-link-custom svelte-12qhfyh" href="../../">Home</a></li> <li><a class="nav-link-custom svelte-12qhfyh" href="../../#about">About</a></li> <li><a class="nav-link-custom svelte-12qhfyh" href="../../#how-to">How to Use</a></li> <li><a class="nav-link-custom svelte-12qhfyh" href="../../#faq">FAQ</a></li> <li><a class="btn btn-primary px-4" href="../../blog">Blog</a></li></ul></nav></header> <main><!--[--><!----><div class="container fade-in post-layout svelte-1apmzc4" style="padding-top: 150px;"><div class="breadcrumbs svelte-1apmzc4"><a href="../../blog" class="svelte-1apmzc4">Blog</a> <span>/</span> <p class="svelte-1apmzc4">How Linear Price Growth Powers Accurate DCA Results</p></div> <article class="prose svelte-1apmzc4"><h1 class="svelte-1apmzc4">How Linear Price Growth Powers Accurate DCA Results</h1> <p class="post-meta svelte-1apmzc4">Published: January 06, 2026</p> <p class="svelte-1apmzc4">The DCA Simulator relies on a clean linear price growth model to deliver consistent and transparent Dollar-Cost Averaging projections. Unlike volatile real-world data, this deterministic approach lets users focus on strategy mechanics without noise from historical fluctuations.</p> <h2 class="svelte-1apmzc4">The Core Formula</h2> <p class="svelte-1apmzc4">For each period, the asset price is calculated as: current price equals initial price multiplied by one plus the growth factor. The growth factor is the annual growth rate divided by one hundred, multiplied by the current period number divided by periods per year (fifty-two for weekly, twelve for monthly). This prorates the annual return evenly across intervals.</p> <h3 class="svelte-1apmzc4">Step-by-Step Calculation</h3> <ul class="svelte-1apmzc4"><li class="svelte-1apmzc4">Determine periods per year based on frequency</li> <li class="svelte-1apmzc4">Loop from period one to the total number of periods</li> <li class="svelte-1apmzc4">Compute prorated growth for that period</li> <li class="svelte-1apmzc4">Derive current price from initial price</li> <li class="svelte-1apmzc4">Calculate units bought as fixed amount divided by current price</li> <li class="svelte-1apmzc4">Accumulate total invested and total units</li></ul> <h3 class="svelte-1apmzc4">Final Metrics</h3> <p class="svelte-1apmzc4">After the loop completes, average cost is total invested divided by total units. The final price uses the full prorated growth over all periods. Portfolio value is then total units multiplied by final price. This yields exact, reproducible results every time.</p> <h2 class="svelte-1apmzc4">Real-World Example Validation</h2> <p class="svelte-1apmzc4">Consider a classic weekly plan: one hundred dollars invested weekly for fifty-two weeks, starting at ten dollars with five percent annual growth. The simulator produces exactly five thousand two hundred dollars invested, five hundred seven point one seven nine seven units acquired, ten point two five dollars average cost, ten point five zero dollars final price, and five thousand three hundred twenty-five point three nine dollars final value. These numbers align perfectly with manual spreadsheet verification of the linear model.</p> <h2 class="svelte-1apmzc4">Advantages of Linear Modeling</h2> <p class="svelte-1apmzc4">Linear growth provides educational clarity—users see exactly how rising prices affect units bought per period and overall average cost. It avoids randomness, making it ideal for comparing different investment amounts, frequencies, or growth assumptions side-by-side via shared URLs.</p> <h2 class="svelte-1apmzc4">FAQ</h2> <details class="svelte-1apmzc4"><summary class="svelte-1apmzc4">Why not use compound growth?</summary> <p class="svelte-1apmzc4">Linear keeps calculations simple and transparent while still demonstrating DCA benefits in trending markets.</p></details> <details class="svelte-1apmzc4"><summary class="svelte-1apmzc4">Can negative growth be simulated?</summary> <p class="svelte-1apmzc4">Yes—enter a negative annual rate to model declining prices and observe increased units per buy.</p></details> <details class="svelte-1apmzc4"><summary class="svelte-1apmzc4">How precise are the results?</summary> <p class="svelte-1apmzc4">Calculations use full floating-point precision with rounding only for display (two decimals for prices, four for units).</p></details> <p class="italic-note svelte-1apmzc4">Master the math behind your DCA strategy with predictable, verifiable outcomes.</p></article></div><!----><!--]--></main> <footer class="glass border-top py-3 mt-auto"><div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center small text-muted"><span>© 2026 AxelBase DCA Simulator</span> <div class="d-flex gap-3"><a href="../../privacy" class="text-decoration-none text-muted hover-accent svelte-12qhfyh">Privacy</a> <a href="../../terms" class="text-decoration-none text-muted hover-accent svelte-12qhfyh">Terms</a></div></div></footer><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_18zy3nd = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						assets: "/dca-simulator"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.BDWrOWcj.js"),
+						import("../../_app/immutable/entry/app.DYKfXwTM.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 5],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

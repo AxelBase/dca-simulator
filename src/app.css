@@ -1,0 +1,118 @@
+/* app.css */
+
+:root {
+  /* Light Mode - Pine Green Base */
+  --brand-green: #2C5545;
+  --primary-bg: #f4f8f6;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-shadow: 0 8px 32px 0 rgba(44, 85, 69, 0.1);
+  
+  --color-text-main: #1a2e26;
+  --color-text-muted: #5c756b;
+  --color-accent: #2C5545;
+  --color-accent-hover: #1e3a2f;
+  
+  --input-bg: rgba(255, 255, 255, 0.9);
+  --blob-color-1: #d5e6df;
+  --blob-color-2: #e9f0ed;
+}
+
+[data-bs-theme="dark"] {
+  /* Dark Mode - Midnight Pine */
+  --primary-bg: #0b1411;
+  --glass-bg: rgba(20, 34, 29, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.05);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  
+  --color-text-main: #e6eee9;
+  --color-text-muted: #94a39d;
+  --color-accent: #4a8a71;
+  --color-accent-hover: #5eb594;
+  
+  --input-bg: rgba(15, 26, 22, 0.6);
+  --blob-color-1: #162b23;
+  --blob-color-2: #0d1a15;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  background: var(--primary-bg);
+  color: var(--color-text-main);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Animated Floating Blobs */
+body::before, body::after {
+  content: '';
+  position: fixed;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(100px);
+  opacity: 0.5;
+  animation: floatBlob 25s infinite alternate ease-in-out;
+}
+
+body::before { background: var(--blob-color-1); top: -10%; left: -10%; }
+body::after { background: var(--blob-color-2); bottom: -10%; right: -10%; animation-delay: -12s; }
+
+@keyframes floatBlob {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(60px, 80px) scale(1.2); }
+}
+
+/* Glassmorphism Classes */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Form Styles */
+.form-control, .form-select {
+  background-color: var(--input-bg) !important;
+  border: 1px solid var(--glass-border) !important;
+  color: var(--color-text-main) !important;
+  border-radius: 12px !important;
+}
+
+/* Bubbly Button */
+.btn-primary {
+  background-color: var(--brand-green) !important;
+  border: none !important;
+  border-radius: 50px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(44, 85, 69, 0.3) !important;
+}
